@@ -1,0 +1,21 @@
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: uhr906jct-java-quarkus-gitops
+  description: This is GitOps manifest for uhr906jct-java-quarkus   
+  links:
+    - url: https://www.redhat.com/en/solutions/trusted-software-supply-chain
+      title: Trusted Secure Supply Chain 
+      icon: dashboard
+      type: admin-dashboard
+  annotations:    
+    argocd/app-selector: rhtap/gitops=uhr906jct-java-quarkus
+    backstage.io/kubernetes-id: uhr906jct-java-quarkus 
+    backstage.io/techdocs-ref: dir:. 
+    github.com/project-slug: chetna14manku-org/uhr906jct-java-quarkus-gitops   
+spec:
+  type: gitops
+  owner: user:guest 
+  lifecycle: experimental
+  dependsOn:
+    - component:uhr906jct-java-quarkus
